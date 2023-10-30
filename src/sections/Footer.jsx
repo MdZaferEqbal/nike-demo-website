@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="max-container">
       <div className="text-white flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
-          <a href="/">
+          <a href="#home">
             <img src={footerLogo} alt="Logo" width={150} height={46}/>
           </a>
           <p className='mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm'>
@@ -16,12 +16,12 @@ const Footer = () => {
           </p>
           <div className='flex items-center gap-5 mt-8'>
             {socialMedia.map((icon) => (
-              <div
-                className='flex justify-center items-center w-12 h-12 bg-white rounded-full'
+              <a href={icon.link} target="_blank"
+                className={`flex hover:bg-slate-gray cursor-pointer justify-center items-center w-12 h-12 bg-white rounded-full`}
                 key={icon.alt}
               >
                 <img src={icon.src} alt={icon.alt} width={24} height={24} />
-              </div>
+              </a>
             ))}
           </div>
         </div>

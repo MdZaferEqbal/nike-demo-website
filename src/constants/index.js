@@ -1,4 +1,4 @@
-import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
+import { facebook, instagram, shieldTick, support, truckFast, twitter, youtube } from "../assets/icons";
 import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
@@ -94,35 +94,37 @@ export const footerLinks = [
     {
         title: "Products",
         links: [
-            { name: "Air Force 1", link: "/" },
-            { name: "Air Max 1", link: "/" },
-            { name: "Air Jordan 1", link: "/" },
-            { name: "Air Force 2", link: "/" },
-            { name: "Nike Waffle Racer", link: "/" },
-            { name: "Nike Cortez", link: "/" },
+            { name: "Air Force 1", link: "https://www.nike.com/in/w?q=air%20force%201&vst=air%20force%201" },
+            { name: "Air Max 1", link: "https://www.nike.com/in/w?q=Air%20Max%201&vst=Air%20Max%201" },
+            { name: "Air Jordan 1", link: "https://www.nike.com/in/w?q=Air%20Jordan%201&vst=Air%20Jordan%201" },
+            { name: "Air Force 2", link: "https://www.nike.com/in/w?q=Air%20Force%202&vst=Air%20Force%202" },
+            { name: "Nike Waffle Racer", link: "https://www.nike.com/in/w?q=Nike%20Waffle%20Racer&vst=Nike%20Waffle%20Racer" },
+            { name: "Nike Cortez", link: "https://www.nike.com/in/w?q=Nike%20Cortez&vst=Nike%20Cortez" },
         ],
     },
     {
         title: "Help",
         links: [
-            { name: "About us", link: "/" },
-            { name: "FAQs", link: "/" },
-            { name: "How it works", link: "/" },
-            { name: "Privacy policy", link: "/" },
-            { name: "Payment policy", link: "/" },
+            { name: "About us", link: "https://about.nike.com/en" },
+            { name: "Delivery", link: "https://www.nike.com/in/help/a/shipping-delivery-gs" },
+            { name: "Returns", link: "https://www.nike.com/in/help/a/returns-policy-gs" },
+            { name: "Payment Options", link: "https://www.nike.com/in/help/a/payment-options-gs" },
+            { name: "Contact Us On Nike.com Inquiries", link: "https://www.nike.com/in/help/#contact" },
+            { name: "Contact Us On All Other Inquiries", link: "https://www.nike.com/in/help/a/india-consumer-care-policy" },
         ],
     },
     {
         title: "Get in touch",
         links: [
             { name: "customer@nike.com", link: "mailto:customer@nike.com" },
-            { name: "+92554862354", link: "tel:+92554862354" },
+            { name: "000 800 919 0566", link: "tel:000 800 919 0566" },
         ],
     },
 ];
 
 export const socialMedia = [
-    { src: facebook, alt: "facebook logo" },
-    { src: twitter, alt: "twitter logo" },
-    { src: instagram, alt: "instagram logo" },
+    { src: facebook, alt: "facebook logo", link: "https://www.facebook.com/nike", color: "bg-blue" },
+    { src: youtube, alt: "youtube logo", link: "https://www.youtube.com/user/nike", color: "bg-red-600" },
+    { src: twitter, alt: "twitter logo", link: "https://twitter.com/Nike", color: "bg-slate-gray" },
+    { src: instagram, alt: "instagram logo", link: "https://www.instagram.com/nike", color: "bg-coral-red" },
 ];

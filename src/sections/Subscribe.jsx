@@ -2,7 +2,7 @@ import { Button } from "../components"
 
 const Subscribe = () => {
   return (
-    <section className="flex justify-between items-center max-container max-lg:flex-col gap-10" id="contact-us">
+    <section className="flex justify-between items-center max-container max-lg:flex-col gap-10">
       <h3 className="text-4xl leading-[68px] lg:max-w-md font-palanquin font-bold">Sign up for 
         <span className="text-coral-red">&nbsp;Updates&nbsp;</span>
         & Newsletters

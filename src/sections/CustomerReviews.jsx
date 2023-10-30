@@ -3,6 +3,7 @@ import { ReviewCard } from "../components"
 
 const CustomerReviews = () => {
   return (
+    <>
     <section>
       <h3 className="max-container text-center text-4xl font-bold">
         What Our
@@ -19,6 +20,8 @@ const CustomerReviews = () => {
         ))}
       </div>
     </section>
+    <div id="contact-us"></div>
+    </>
   )
 }
 

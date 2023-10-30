@@ -2,7 +2,7 @@ import {Hero, Product, SuperQuality, Services, SpecialOffers, CustomerReview, Su
 import {NavBar} from "./components";
 
 const App = () => (
-  <main className="relative">
+  <main className="relative" id="home">
     <NavBar/>
     <section className="xl:padding-l wide:padding-r padding-b">
       <Hero/>
@@ -21,9 +21,11 @@ const App = () => (
     </section>
     <section className="padding bg-pale-blue">
       <CustomerReview/>
-    </section><section className="padding-x sm:py-32 py-16 w-full">
+    </section>
+    <section className="padding-x sm:py-32 py-16 w-full">
       <Subscribe/>
-    </section><section className="padding bg-black padding-x padding-t pb-8">
+    </section>
+    <section className="padding bg-black padding-x padding-t pb-8">
       <Footer/>
     </section>
   </main>

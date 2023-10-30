@@ -1,5 +1,4 @@
 import {headerLogo} from "../assets/images";
-import {hamburger} from "../assets/icons";
 import {navLinks} from "../constants";
 import { useState } from "react";
 
@@ -14,7 +13,7 @@ const NavBar = () => {
   }
 
   return (
-    <header className="padding-x py-8 fixed opacity-90 shadow-xl bg-slate-100 z-10 w-full">
+    <header className="padding-x py-8 fixed shadow-xl bg-slate-100 z-10 w-full">
       <nav className="flex justify-between items-center top-0 max-container">
         <a href="#home" label="Home">
           <img src={headerLogo} alt="Logo" width={130} height={29}/>
@@ -37,9 +36,9 @@ const NavBar = () => {
           </div>
           <div className={`p-6 bg-slate-100 shadow-xl absolute top-19 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl
             ${menuView === "hidden" ? "hidden" : (!menuView ? "flex" : "reverse-animation")} navbar-drop-down-menu`}>
-              <ul className="list-none flex justify-end items-start gap-5 flex-col max-lg:block">
+              <ul className="list-none flex justify-end items-start gap-4 flex-col max-lg:block">
               {navLinks.map((item) => (
-                <li key={item.label} onClick={() => setActiveLink(item.href)}>
+                <li className="pb-2" key={item.label} onClick={() => setActiveLink(item.href)}>
                   <a onClick={handleHamburgerClick} href={item.href} className={`font-montserrat leading-normal hover:font-semibold hover:text-coral-red 
                     cursor-pointer text-l ${activeLink === item.href ? "text-coral-red font-semibold" : "text-slate-gray"}`}>
                       {item.label}

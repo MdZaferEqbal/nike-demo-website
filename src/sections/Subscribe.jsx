@@ -2,6 +2,8 @@ import { Button } from "../components"
 
 const Subscribe = () => {
   return (
+    <>
+    <div id="contact-us" className="h-[93px]"></div>
     <section className="flex justify-between items-center max-container max-lg:flex-col gap-10">
       <h3 className="text-4xl leading-[68px] lg:max-w-md font-palanquin font-bold">Sign up for 
         <span className="text-coral-red">&nbsp;Updates&nbsp;</span>
@@ -15,6 +17,7 @@ const Subscribe = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

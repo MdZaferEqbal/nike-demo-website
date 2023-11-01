@@ -61,6 +61,20 @@
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
+.hide-navbar {
+  transition: transform 0.3s;
+  transform: translateY(-100%);
+}
+
+.hide-navbar:hover {
+  transform: translateY(0);
+}
+
+.display-navbar {
+  transition: transform 0.3s;
+  transform: translateY(0);
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;

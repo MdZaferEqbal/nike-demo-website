@@ -1,10 +1,54 @@
 import {headerLogo} from "../assets/images";
 import {navLinks} from "../constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const [menuView, setMeanuView]    = useState("hidden");
   const [activeLink, setActiveLink] = useState("");
+  const [scrollDirection, setScrollDirection] = useState('none');
+  const [prevScrollY, setPrevScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY) {
+        setScrollDirection('down');
+      } else if (currentScrollY < prevScrollY) {
+        setScrollDirection('up');
+      } else {
+        setScrollDirection('none');
+      }
+
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollY]);
+
+  const [isPointingAtTop, setIsPointingAtTop] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const topAreaHeight = 50; // Set the height of the area you want to track
+      const isWithinTopArea =
+        e.clientY <= topAreaHeight &&
+        e.clientX >= 0 &&
+        e.clientX <= window.innerWidth;
+
+      setIsPointingAtTop(isWithinTopArea);
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   const handleHamburgerClick = () => {
     setMeanuView(!menuView);
@@ -13,7 +57,8 @@ const NavBar = () => {
   }
 
   return (
-    <header className="padding-x py-8 fixed shadow-xl bg-slate-100 z-10 w-full">
+    <header className={`padding-x py-8 fixed shadow-xl bg-slate-100 z-10 w-full
+      ${scrollDirection === "down" && !isPointingAtTop ? "hide-navbar" : "display-navbar"}`}>
       <nav className="flex justify-between items-center top-0 max-container">
         <a href="#home" label="Home">
           <img src={headerLogo} alt="Logo" width={130} height={29}/>
